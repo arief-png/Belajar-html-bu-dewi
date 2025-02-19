@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DewiHTML</title>
+    <link rel="icon" href="logo.png" type="image/icon type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">INFORMATIKA</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Article Kami</a></li>
+        </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <header>
+        <h1>Belajar HTML Lengkap</h1>
+        <h4 class="kecil">With Bu <b class="bold1">Dewi</b></h4>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#pengertian">Pengertian</a></li>
+                <li><a href="#sejarah">Sejarah</a></li>
+                <li><a href="#kode">Kode Dasar</a></li>
+                <li><a href="#elemen">Elemen HTML</a></li>
+                <li><a href="#atribut">Atribut HTML</a></li>
+                <li><a href="#form">Formulir HTML</a></li>
+                <li><a href="#table">Tabel HTML</a></li>
+                <li><a href="#media">Media HTML</a></li>
+                <li><a href="#list">List HTML</a></li>
+                <li><a href="#semantic">Elemen Semantik</a></li>
+                <li><a href="#iframe">Iframe</a></li>
+                <li><a href="#meta">Meta Tag</a></li>
+                <li><a href="#svg">SVG</a></li>
+                <li><a href="#canvas">Canvas</a></li>
+                <li><a href="#data-attributes">Data Attributes</a></li>
+                <li><a href="#responsive">Desain Responsif</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="pengertian">
+                <h2>Pengertian HTML</h2>
+                <p>
+                    HTML (HyperText Markup Language) adalah bahasa markup standar yang digunakan untuk membuat dan mendesain halaman web. 
+                    HTML terdiri dari serangkaian elemen yang digunakan untuk mengatur struktur konten, seperti teks, gambar, tautan, dan lainnya. 
+                    Setiap elemen HTML diwakili oleh tag, seperti <code>&lt;p&gt;</code> untuk paragraf, <code>&lt;h1&gt;</code> untuk judul, dan <code>&lt;a&gt;</code> untuk tautan. 
+                    HTML bekerja bersama dengan CSS (Cascading Style Sheets) dan JavaScript untuk menciptakan pengalaman web yang interaktif dan menarik.
+                </p>
+            </section>
+
+            <section id="sejarah">
+                <h2>Sejarah HTML</h2>
+                <p>
+                    HTML pertama kali dikembangkan oleh Tim Berners-Lee pada tahun 1991 sebagai bagian dari proyek World Wide Web (WWW). 
+                    Versi pertama HTML sangat sederhana dan hanya mendukung elemen dasar seperti judul, paragraf, dan tautan. 
+                    Seiring waktu, HTML terus berkembang dengan versi baru seperti HTML 2.0, HTML 3.2, HTML 4.01, dan akhirnya HTML5 yang dirilis pada tahun 2014. 
+                    HTML5 memperkenalkan banyak fitur baru seperti elemen semantik, dukungan multimedia, dan API yang memungkinkan pengembangan aplikasi web yang lebih kompleks.
+                </p>
+            </section>
+
+            <section id="kode">
+                <h2>Kode Dasar HTML</h2>
+                <p>
+                    Setiap dokumen HTML dimulai dengan deklarasi <code>&lt;!DOCTYPE html&gt;</code> yang memberitahu browser bahwa dokumen ini menggunakan HTML5. 
+                    Struktur dasar HTML terdiri dari elemen <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, dan <code>&lt;body&gt;</code>. 
+                    Elemen <code>&lt;head&gt;</code> berisi metadata seperti judul halaman dan tautan ke file CSS, sedangkan elemen <code>&lt;body&gt;</code> berisi konten yang ditampilkan di halaman web.
+                </p>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Judul Halaman&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Halo Dunia!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <button class="show-output">Output</button>
+                    <div class="output-container" style="display: none;">
+                    <iframe class="output-frame"></iframe>
+                        <img src="" alt="">
+                    <h3>Penjelasan:</h4>
+                        <b><code>&lt;!DOCTYPE html&gt;</b> </code>: Ini berfungsi Untuk memberitahu browser bahwa dokumen ini menggunakan HTML5.
+                        <br><br>
+                        <b><code>&lt;html&gt; &lt;/html&gt;</code></b> : Ini berfungsi untuk menandai awal dan akhir dokumen HTML.
+                        <br><br>
+                        <b><code>&lt;head&gt; &lt;/head&gt;</code></b> : Ini berfungsi untuk sebagai wadah untuk metadata dan elemen-elemen yang tidak langsung ditampilkan pada halaman web contoh nya adalah : <code>&lt;title&gt;</code> DLL.
+                        <br><br>
+                        <b><code>&lt;body&gt; &lt;/body&gt;</code></b> HTML memiliki fungsi utama sebagai wadah untuk semua konten yang akan ditampilkan pada halaman web. 
+            </section>
+
+            <section id="elemen">
+                <h2>Elemen HTML</h2>
+                <p>
+                    Elemen HTML adalah blok bangunan dasar dari sebuah halaman web. Setiap elemen terdiri dari tag pembuka, konten, dan tag penutup. 
+                    Contoh elemen HTML termasuk <code>&lt;p&gt;</code> untuk paragraf, <code>&lt;h1&gt;</code> hingga <code>&lt;h6&gt;</code> untuk judul, dan <code>&lt;a&gt;</code> untuk tautan. 
+                    Beberapa elemen tidak memiliki tag penutup, seperti <code>&lt;img&gt;</code> untuk gambar dan <code>&lt;br&gt;</code> untuk baris baru.
+                </p>
+                <pre><code>&lt;h1&gt;Ini adalah judul&lt;/h1&gt;<br>&lt;h2&gt;Ini adalah judul&lt;/h2&gt; <br>&lt;h3&gt;Ini adalah judul&lt;/h3&gt; <br>&lt;h4&gt;Ini adalah judul&lt;/h4&gt; <br>&lt;h5&gt;Ini adalah judul&lt;/h5&gt; <br>&lt;h6&gt;Ini adalah judul&lt;/h6&gt; <br> <br>&lt;p&gt;Ini adalah paragraf&lt;/p&gt; </code></pre>
+                <button class="show-output">Output</button>
+                    <div class="output-container" style="display: none;">
+                    <iframe class="output-frame"></iframe>
+            </section>
+
+
+            <section id="atribut">
+                <h2>Atribut HTML</h2>
+                <p>
+                    Atribut HTML digunakan untuk memberikan informasi tambahan tentang elemen. Atribut selalu ditulis dalam tag pembuka dan biasanya terdiri dari nama dan nilai. 
+                    Contoh atribut termasuk <code>href</code> untuk menentukan URL tautan, <code>src</code> untuk menentukan sumber gambar, dan <code>class</code> untuk menentukan kelas CSS.
+                </p>
+                <pre><code>&lt;a href="https://wa.me/6288269059314" target="_blank"&gt;Klik di sini&lt;/a&gt; <br>&lt;img src="logo.png"&gt;</code></pre>
+                <button class="show-output">Output</button>
+                    <div class="output-container" style="display: none;">
+                    <iframe class="output-frame"></iframe>
+            </section>
+
+            <section id="form">
+                <h2>Formulir HTML</h2>
+                <p>
+                    Formulir HTML digunakan untuk mengumpulkan input dari pengguna. Elemen <code>&lt;form&gt;</code> digunakan untuk membuat formulir, dan elemen seperti <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, dan <code>&lt;select&gt;</code> digunakan untuk membuat berbagai jenis input. 
+                    Formulir dapat dikirim ke server menggunakan metode GET atau POST.
+                </p>
+                <pre><code>&lt;form&gt;
+    Nama: &lt;input type="text" name="nama"&gt;
+    &lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt; <br><br>&lt;form&gt;
+Kelamin: &lt;input type="radio" name="Kelamin"&gt;
+&lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt;<br><br>&lt;form&gt;
+Kelamin: &lt;input type="checkbox" name="Kelamin"&gt;
+&lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt;<br><br>&lt;form&gt;
+Tanggal: &lt;input type="date" name="Kelamin"&gt;
+&lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt;</code></pre>
+                
+            <button class="show-output">Output</button>
+            <div class="output-container" style="display: none;">
+            <iframe class="output-frame"></iframe>
+            </section>
+
+      
+           <section id="table">
+                <h2>Tabel HTML</h2>
+                <p>
+                    Tabel HTML digunakan untuk menampilkan data dalam format baris dan kolom. Elemen <code>&lt;table&gt;</code> digunakan untuk membuat tabel, <code>&lt;tr&gt;</code> untuk baris, <code>&lt;th&gt;</code> untuk header kolom, dan <code>&lt;td&gt;</code> untuk sel data. 
+                    Atribut seperti <code>border</code> dan <code>colspan</code> dapat digunakan untuk mengatur tampilan tabel.
+                </p>
+                <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nama&lt;/th&gt;
+        &lt;th&gt;Usia&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Arief&lt;/td&gt;
+        &lt;td&gt;16&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    
+            <button class="show-output">Output</button>
+            <div class="output-container" style="display: none;">
+            <iframe class="output-frame"></iframe>
+            </section>
+
+            
+            <section id="media">
+                <h2>Media HTML</h2>
+                <p>
+                    HTML mendukung berbagai jenis media seperti gambar, audio, dan video. Elemen <code>&lt;img&gt;</code> digunakan untuk menampilkan gambar, <code>&lt;audio&gt;</code> untuk audio, dan <code>&lt;video&gt;</code> untuk video. 
+                    Atribut seperti <code>src</code> digunakan untuk menentukan sumber media, dan <code>controls</code> digunakan untuk menampilkan kontrol pemutaran.
+                </p>
+                <pre><code>&lt;img src="logo.png" alt="Deskripsi"&gt;</code></pre>
+                <button class="show-output">Output</button>
+                <div class="output-container" style="display: none;">
+                <iframe class="output-frame"></iframe>
+            </section>
+
+           
+            <section id="list">
+                <h2>List HTML</h2>
+                <p>
+                    List HTML digunakan untuk menampilkan daftar item. Ada dua jenis list utama: unordered list (<code>&lt;ul&gt;</code>) yang menggunakan bullet points, dan ordered list (<code>&lt;ol&gt;</code>) yang menggunakan angka atau huruf. 
+                    Setiap item dalam list ditandai dengan elemen <code>&lt;li&gt;</code>.
+                </p>
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+            <button class="show-output">Output</button>
+            <div class="output-container" style="display: none;">
+            <iframe class="output-frame"></iframe>
+            </section>
+
+           
+            <section id="semantic">
+                <h2>Elemen Semantik</h2>
+                <p>
+                    Elemen semantik adalah elemen HTML yang memiliki makna khusus dan membantu mesin pencari dan pengembang memahami struktur halaman web. 
+                    Contoh elemen semantik termasuk <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, dan <code>&lt;section&gt;</code>. 
+                    Elemen ini membuat kode lebih mudah dibaca dan dirawat.
+                </p>
+                <pre><code>&lt;article&gt;Ini adalah artikel&lt;/article&gt;</code></pre>
+            <button class="show-output">Output</button>
+            <div class="output-container" style="display: none;">
+            <iframe class="output-frame"></iframe>
+            </section>
+
+           
+            <section id="iframe">
+                <h2>Iframe</h2>
+                <p>
+                    Iframe digunakan untuk menampilkan halaman web atau dokumen lain di dalam halaman web saat ini. Elemen <code>&lt;iframe&gt;</code> memungkinkan Anda menyematkan konten dari sumber eksternal, seperti video YouTube atau peta Google.
+                </p>
+                <pre><code>&lt;iframe src="https://jagongoding.com/web/html/dasar/tipe-element-input/"&gt;&lt;/iframe&gt;</code></pre>
+                <button class="show-output">Output</button>
+                <div class="output-container" style="display: none;">
+                <iframe class="output-frame"></iframe>
+            </section>
+
+            <section id="meta">
+                <h2>Meta Tag</h2>
+                <p>
+                    Meta tag digunakan untuk menyediakan metadata tentang dokumen HTML, seperti deskripsi halaman, kata kunci, dan penulis. 
+                    Meta tag ditempatkan di dalam elemen <code>&lt;head&gt;</code> dan tidak ditampilkan di halaman web, tetapi berguna untuk SEO (Search Engine Optimization).
+                </p>
+                <pre><code>&lt;meta name="description" content="Belajar HTML"&gt;</code></pre>
+            </section>
+
+            <section id="svg">
+                <h2>SVG</h2>
+                <p>
+                    SVG (Scalable Vector Graphics) adalah format gambar berbasis XML yang digunakan untuk membuat grafik vektor. 
+                    SVG dapat diskalakan tanpa kehilangan kualitas dan sering digunakan untuk ikon, logo, dan ilustrasi.
+                </p>
+                <pre><code>&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt;
+&lt;/svg&gt;
+<br><br>&lt;svg width="100" height="100"&gt;
+&lt;rect x="10" y="10" width= "80" height= "80" stroke="black" stroke-width="3" fill="blue"&gt;
+&lt;/svg&gt;</code></pre>
+                
+<button class="show-output">Output</button>
+<div class="output-container" style="display: none;">
+<iframe class="output-frame"></iframe>
+            </section>
+
+            <section id="canvas">
+                <h2>Canvas</h2>
+                <p>
+                    Elemen <code>&lt;canvas&gt;</code> digunakan untuk menggambar grafik secara dinamis menggunakan JavaScript. 
+                    Canvas sering digunakan untuk membuat animasi, grafik interaktif, dan visualisasi data.
+                </p>
+                <pre><code>&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</code></pre>
+            </section>
+
+            <section id="data-attributes">
+                <h2>Data Attributes</h2>
+                <p>
+                    Data attributes adalah atribut khusus yang dimulai dengan <code>data-</code> dan digunakan untuk menyimpan informasi tambahan dalam elemen HTML. 
+                    Data attributes dapat diakses menggunakan JavaScript untuk membuat halaman web yang lebih dinamis.
+                </p>
+                <pre><code>&lt;div data-info="contoh"&gt;Elemen dengan Data Attributes&lt;/div&gt;</code></pre>
+                <button class="show-output">Output</button>
+                <div class="output-container" style="display: none;">
+                <iframe class="output-frame"></iframe>
+            </section>
+
+            <section id="responsive">
+                <h2>Desain Responsif</h2>
+                <p>
+                    Desain responsif adalah pendekatan desain web yang memastikan halaman web terlihat baik di semua perangkat, termasuk desktop, tablet, dan ponsel. 
+                    Meta tag <code>&lt;meta name="viewport"&gt;</code> dan CSS media queries digunakan untuk mencapai desain responsif.
+                </p>
+                <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+            </section>
+
+            <div class="buttons">
+                <button id="changeBg">Dark Mode</button>
+                <button id="toggleFont">Ubah Font</button>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Belajar HTML Lengkap With Bu dewi</p>
+            <div class="contact-info">
+                <h3>Hubungi Kami:</h3>
+                <ul>
+                    <li>
+                        <a href="https://wa.me/6288269059314" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20">
+                            WhatsApp (Klik)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:ariefalsulthan395@gmail.com">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" width="20">
+                            Gmail (Klik)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="feedback-form">
+                <h3>Kritik dan Saran</h3>
+                <form id="feedbackForm">
+                    <textarea id="feedbackMessage" placeholder="Masukkan kritik dan saran Anda..." required></textarea>
+                    <button type="submit">Kirim</button>
+                    <p class="skecil">Made By Arief</p>
+                </form>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
